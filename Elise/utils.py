@@ -1,0 +1,2 @@
+TITLE = "Elise"
+GEOMETRY = "600x400"
