@@ -8,7 +8,7 @@ from Elise.utils import TITLE, GEOMETRY
 
 
 class HighlightText(ScrolledText):
-    '''A text widget with a new method, highlight_pattern()
+    """ A text widget with a new method, highlight_pattern()
 
     example:
 
@@ -18,7 +18,7 @@ class HighlightText(ScrolledText):
 
     The highlight_pattern method is a simplified python
     version of the tcl code at http://wiki.tcl.tk/3246
-    '''
+    """
 
     def __init__(self, *args, **kwargs):
         tkinter.Text.__init__(self, *args, **kwargs)
@@ -27,11 +27,11 @@ class HighlightText(ScrolledText):
 
     def highlight_pattern(self, pattern, tag, start="1.0", end="end",
                           regexp=False):
-        '''Apply the given tag to all text that matches the given pattern
+        """Apply the given tag to all text that matches the given pattern
 
         If 'regexp' is set to True, pattern will be treated as a regular
         expression according to Tcl's regular expression syntax.
-        '''
+        """
 
         start = self.index(start)
         end = self.index(end)
@@ -59,13 +59,13 @@ class HighlightText(ScrolledText):
 
 
 class Elise(tkinter.Tk):
-    ''' Main class for the application
+    """ Main class for the application
 
     example:
 
     elise = Elise()
     elise.mainloop()
-    '''
+    """
 
     def __init__(self):
         super().__init__()
@@ -87,9 +87,9 @@ class Elise(tkinter.Tk):
         self.title(TITLE)
         self.geometry(GEOMETRY)
 
-        self.init_GUI()
+        self.init_gui()
 
-    def init_GUI(self):
+    def init_gui(self):
         self.init_menu()
 
         self.bind('<Return>', self.enter_callback)
@@ -130,22 +130,22 @@ class Elise(tkinter.Tk):
         self.file_menu.add_command(label='Exit', command=self.exit_command)
 
     def enter_callback(self, *args, **kwargs):
-        ''' Enter keyboard key callback
+        """ Enter keyboard key callback
 
         :param args:
         :param kwargs:
         :return:
-        '''
+        """
         if self.is_check_active:
             self.check_text_command()
 
     def regex_entry_callback(self, *args, **kwargs):
-        ''' Callback for every change of text in the entry widget
+        """ Callback for every change of text in the entry widget
 
         :param args:
         :param kwargs:
         :return:
-        '''
+        """
         reg_entry = self.regex_entry_string.get()
         if reg_entry == '':
             self.regex_error_text.config(text='')
@@ -162,10 +162,10 @@ class Elise(tkinter.Tk):
                 self.is_check_active = False
 
     def check_text_command(self):
-        ''' Button/Enter key command to check the whole text for matching regular expression
+        """ Button/Enter key command to check the whole text for matching regular expression
 
         :return:
-        '''
+        """
         self.regex_check_text.clear_highlight('red')
         self.regex_check_text.highlight_pattern(self.regex_entry_string.get(), 'red', regexp=True)
 
@@ -203,7 +203,8 @@ class Elise(tkinter.Tk):
             with open(file_name, 'w') as f:
                 f.write(reg_entry)
 
-    def faq_command(self):
+    @staticmethod
+    def faq_command():
         webbrowser.open('https://en.wikipedia.org/wiki/Regular_expression')
 
 
