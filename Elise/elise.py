@@ -5,6 +5,7 @@ from tkinter.scrolledtext import ScrolledText
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 from tkinter.messagebox import showerror
 from Elise.utils import TITLE, GEOMETRY
+from Elise.tooltip import ToolTip
 
 
 class HighlightText(ScrolledText):
@@ -76,11 +77,14 @@ class Elise(tkinter.Tk):
         self.file_menu = None
 
         self.regex_entry = None
+        self.regex_entry_ttp = None
+
         self.regex_error_text = None
         self.regex_check_error_text = None
         self.regex_check_text = None
 
         self.check_button = None
+        self.check_button_ttp = None
 
         self.regex_entry_string = tkinter.StringVar()
 
@@ -96,6 +100,7 @@ class Elise(tkinter.Tk):
 
         self.regex_entry_string.trace_add('write', self.regex_entry_callback)
         self.regex_entry = tkinter.Entry(textvariable=self.regex_entry_string, width=45)
+        self.regex_entry_ttp = ToolTip(self.regex_entry, "Pattern for search")
         self.regex_entry.grid(row=0, column=0, ipadx=5, ipady=5, padx=5, pady=5)
 
         self.regex_error_text = tkinter.Label()
@@ -111,6 +116,7 @@ class Elise(tkinter.Tk):
 
         self.check_button = tkinter.Button(text='Check text', width=40, command=self.check_text_command,
                                            state=tkinter.DISABLED)
+        self.check_button_ttp = ToolTip(self.check_button, "Process text")
         self.check_button.grid(row=3, column=0, ipady=5)
 
         self.config(menu=self.menu)
