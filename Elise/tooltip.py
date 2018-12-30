@@ -25,7 +25,7 @@ class ToolTip(object):
 
     def schedule(self):
         self.unschedule()
-        self.id = self.widget.after(self.waittime, self.showtip)
+        self.id = self.widget.after(self.wait_time, self.showtip)
 
     def unschedule(self):
         id = self.id
@@ -45,7 +45,7 @@ class ToolTip(object):
         self.tw.wm_geometry("+%d+%d" % (x, y))
         label = tk.Label(self.tw, text=self.text, justify='left',
                          background="#ffffff", relief='solid', borderwidth=1,
-                         wraplength=self.wraplength)
+                         wraplength=self.wrap_length)
         label.pack(ipadx=1)
 
     def hidetip(self):
