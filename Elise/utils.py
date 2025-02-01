@@ -1,2 +1,0 @@
-TITLE = "Elise"
-GEOMETRY = "600x500"
