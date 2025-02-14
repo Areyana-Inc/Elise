@@ -21,6 +21,7 @@ target_link_libraries(Elise
         Qt::Widgets
 )
 
+
 include(GNUInstallDirs)
 
 install(TARGETS Elise
@@ -34,4 +35,10 @@ qt_generate_deploy_app_script(
     OUTPUT_SCRIPT deploy_script
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
+
+set_target_properties(Elise PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
 install(SCRIPT ${deploy_script})
