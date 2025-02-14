@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "regexp_highlighter.h"
 #include <QSyntaxHighlighter>
 #include <QRegularExpressionValidator>
 #include <QRegularExpression>
@@ -9,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QRegularExpression re("[0-9 ]+");
-    QRegularExpressionValidator validator(re);
+
+    highlighter = new RegexpHighlighter(ui->testStringTextEdit->document());
     
 }
 
