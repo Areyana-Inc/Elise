@@ -10,6 +10,8 @@ qt_add_executable(Elise
     main.cpp
     mainwindow.cpp
     mainwindow.h
+    regexp_highlighter.cpp
+    regexp_highlighter.h
     mainwindow.ui
 )
 
