@@ -3,7 +3,8 @@
 
 RegexpHighlighter::RegexpHighlighter(QTextDocument *parent): QSyntaxHighlighter(parent)
 {
-
+    regexFormat.setForeground(Qt::darkBlue);
+    regexFormat.setFontWeight(QFont::Bold);
 }
 
 void RegexpHighlighter::highlightBlock(const QString &text)
@@ -19,13 +20,11 @@ void RegexpHighlighter::highlightBlock(const QString &text)
 
 void RegexpHighlighter::regularExpressionChanged(const QString &text) {
     highlightRules.clear();
-    QTextCharFormat keywordFormat;
-    keywordFormat.setForeground(Qt::darkBlue);
-    keywordFormat.setFontWeight(QFont::Bold);
     
     HightlightRule rule;
 
-    rule.format = keywordFormat;
+    rule.format = regexFormat;
     rule.pattern = QRegularExpression(text);
     highlightRules.append(rule);
+    rehighlight();
 }

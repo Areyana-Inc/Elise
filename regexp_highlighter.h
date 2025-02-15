@@ -23,6 +23,8 @@ private:
         QTextCharFormat format;
     };
     QList<HightlightRule> highlightRules;
+
+    QTextCharFormat regexFormat;
 };
 
 #endif // REGEXP_HIGHLIGHTER_H
