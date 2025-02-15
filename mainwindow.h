@@ -17,6 +17,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+public slots: 
+    void matchesChanged(const QList<QRegularExpressionMatch> matches);
 
 private:
     Ui::MainWindow *ui;
