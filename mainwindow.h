@@ -18,9 +18,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void regularExpressionChanged(const QString &text);
-
 private:
     Ui::MainWindow *ui;
     RegexpHighlighter *highlighter;

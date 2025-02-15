@@ -13,11 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     highlighter = new RegexpHighlighter(ui->testStringTextEdit->document());
 
-    connect(ui->regularExpressionEdit, &QLineEdit::textChanged, this, &MainWindow::regularExpressionChanged);
-}
-
-void MainWindow::regularExpressionChanged(const QString &text) {
-
+    connect(ui->regularExpressionEdit, &QLineEdit::textChanged, highlighter, &RegexpHighlighter::regularExpressionChanged);
 }
 
 MainWindow::~MainWindow()

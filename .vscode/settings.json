@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "qstringliteral": "cpp",
-        "qmainwindow": "cpp"
+        "qmainwindow": "cpp",
+        "qsyntaxhighlighter": "cpp",
+        "qregularexpression": "cpp",
+        "new": "cpp"
     }
 }

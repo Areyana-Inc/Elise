@@ -11,6 +11,11 @@ public:
     RegexpHighlighter(QTextDocument *parent = nullptr);
 protected:
     void highlightBlock(const QString &text) override;
+public slots:
+    void regularExpressionChanged(const QString &text);
+signals:
+    void highlightUpdated();
+
 private:
     struct HightlightRule
     {
