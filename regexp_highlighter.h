@@ -14,7 +14,7 @@ protected:
 public slots:
     void regularExpressionChanged(const QString &text);
 signals:
-    void highlightUpdated();
+    void highlightUpdated(const QList<QRegularExpressionMatch> matches);
 
 private:
     struct HightlightRule

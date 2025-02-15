@@ -9,13 +9,16 @@ RegexpHighlighter::RegexpHighlighter(QTextDocument *parent): QSyntaxHighlighter(
 
 void RegexpHighlighter::highlightBlock(const QString &text)
 {
+    QList<QRegularExpressionMatch> newMatches;
     for (const HightlightRule &rule : std::as_const(highlightRules)) {
         QRegularExpressionMatchIterator matchIterator = rule.pattern.globalMatch(text);
         while (matchIterator.hasNext()) {
             QRegularExpressionMatch match = matchIterator.next();
+            newMatches.append(match);
             setFormat(match.capturedStart(), match.capturedLength(), rule.format);
         }
     }
+    emit highlightUpdated(newMatches);
 }
 
 void RegexpHighlighter::regularExpressionChanged(const QString &text) {
