@@ -4,6 +4,7 @@
 #include <QSyntaxHighlighter>
 #include <QRegularExpressionValidator>
 #include <QRegularExpression>
+#include <QStandardItemModel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,7 +20,17 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::matchesChanged(const QList<QRegularExpressionMatch> matches)
 {
+    auto matchList = ui->matchList;
+    auto itemModel = new QStandardItemModel();
 
+    for (qsizetype i = 0; i < matches.size(); ++i) {
+        auto currentMatch = matches[i];
+        auto line = QString("Match %1 - %2 : %3").arg(currentMatch.capturedStart()).arg(currentMatch.capturedEnd()).arg(currentMatch.captured());
+        auto item = new QStandardItem(line);
+        itemModel->appendRow(item);
+    }
+
+    matchList->setModel(itemModel);
 }
 
 MainWindow::~MainWindow()
