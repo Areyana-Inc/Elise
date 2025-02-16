@@ -17,8 +17,13 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-public slots: 
+private slots: 
     void matchesChanged(const QList<QRegularExpressionMatch> matches);
+    void helpTriggered();
+    void infoTriggered();
+
+private:
+    void setupSignals();
 
 private:
     Ui::MainWindow *ui;

@@ -105,10 +105,22 @@
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionInfo"/>
    </widget>
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

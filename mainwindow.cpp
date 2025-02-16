@@ -5,6 +5,7 @@
 #include <QRegularExpressionValidator>
 #include <QRegularExpression>
 #include <QStandardItemModel>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,8 +15,31 @@ MainWindow::MainWindow(QWidget *parent)
 
     highlighter = new RegexpHighlighter(ui->testStringTextEdit->document());
 
+    setupSignals();
+}
+
+void MainWindow::setupSignals() 
+{
     connect(ui->regularExpressionEdit, &QLineEdit::textChanged, highlighter, &RegexpHighlighter::regularExpressionChanged);
     connect(highlighter, &RegexpHighlighter::highlightUpdated, this, &MainWindow::matchesChanged);
+    
+    //Menu
+    connect(ui->actionHelp, &QAction::triggered, this, &MainWindow::helpTriggered);
+    connect(ui->actionInfo, &QAction::triggered, this, &MainWindow::infoTriggered);
+}
+
+void MainWindow::helpTriggered()
+{
+    QMessageBox msgBox;
+    msgBox.setText("Help triggered. REPLACE TEXT.");
+    msgBox.exec();
+}
+
+void MainWindow::infoTriggered()
+{
+    QMessageBox msgBox;
+    msgBox.setText("Info triggered. REPLACE TEXT");
+    msgBox.exec();
 }
 
 void MainWindow::matchesChanged(const QList<QRegularExpressionMatch> matches)

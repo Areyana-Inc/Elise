@@ -11,6 +11,7 @@
         "optional": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "qmessagebox": "cpp"
+        "qmessagebox": "cpp",
+        "qstandarditemmodel": "cpp"
     }
 }
