@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
     QDir::addSearchPath("icon", QDir::currentPath() + "/theme");
       
-    QFile file("dark_teal.qss");
+    QFile file(":/theme/dark_teal.qss");
     file.open(QFile::ReadOnly);
 
     QString styleSheet { file.readAll() };

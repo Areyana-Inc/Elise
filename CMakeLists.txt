@@ -3,10 +3,13 @@ project(Elise LANGUAGES CXX)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
+set(CMAKE_AUTORCC ON)
+
 qt_standard_project_setup()
 
 qt_add_executable(Elise
     WIN32 MACOSX_BUNDLE
+    elise.qrc
     main.cpp
     mainwindow.cpp
     mainwindow.h
