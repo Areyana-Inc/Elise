@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"qstringliteral": "cpp",
+			"qmainwindow": "cpp",
+			"qsyntaxhighlighter": "cpp",
+			"qregularexpression": "cpp",
+			"new": "cpp",
+			"chrono": "cpp",
+			"limits": "cpp",
+			"memory": "cpp",
+			"optional": "cpp",
+			"type_traits": "cpp",
+			"utility": "cpp",
+			"qmessagebox": "cpp",
+			"qstandarditemmodel": "cpp"
+		}
+	}
+}
