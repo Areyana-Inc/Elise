@@ -122,6 +122,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="elise.qrc"/>
+ </resources>
  <connections/>
 </ui>

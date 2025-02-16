@@ -6,7 +6,7 @@
 *{
   color: #ffffff;
 
-  font-family: Roboto;
+  font-family: Georgia;
 
   
     font-size: 13px;
@@ -138,7 +138,7 @@ QTreeView,
 QListView,
 QLineEdit,
 QComboBox {
-  color: #000000;
+  color: #FFFFFF;
   padding-left: 16px;
   border-radius: 0px;
   border-radius: 0px;
@@ -1321,12 +1321,12 @@ QDialog QToolButton:disabled {
 
 QMainWindow::separator:vertical,
 QSplitter::handle:horizontal {
-  image: url(icon:/primary/splitter-horizontal.svg);
+  image: url(:/theme/primary/splitter-horizontal.svg);
 }
 
 QMainWindow::separator:horizontal,
 QSplitter::handle:vertical {
-  image: url(icon:/primary/splitter-vertical.svg);
+  image: url(:/theme/primary/splitter-vertical.svg);
 }
 
 QSizeGrip {

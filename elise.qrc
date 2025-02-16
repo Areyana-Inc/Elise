@@ -2,4 +2,8 @@
     <qresource prefix="/theme">
         <file>dark_teal.qss</file>
     </qresource>
+    <qresource prefix="/">
+        <file>theme/primary/splitter-horizontal.svg</file>
+        <file>theme/primary/splitter-vertical.svg</file>
+    </qresource>
 </RCC>
