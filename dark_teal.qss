@@ -212,7 +212,7 @@ QComboBox::drop-down {
 
 QDateEdit::down-arrow,
 QComboBox::down-arrow {
-  image: url(icon:/active/downarrow.svg);
+  image: url(:/theme/active/downarrow.svg);
   margin-right: 12px;
 }
 
@@ -225,7 +225,7 @@ QComboBox::down-arrow:focus {
 
 QDateEdit::down-arrow:disabled,
 QComboBox::down-arrow:disabled {
-  image: url(icon:/disabled/downarrow.svg);
+  image: url(:/theme/disabled/downarrow.svg);
   margin-right: 12px;
 }
 
@@ -257,7 +257,7 @@ QSpinBox::up-button {
   subcontrol-origin: border;
   subcontrol-position: top right;
   width: 20px;
-  image: url(icon:/active/uparrow.svg);
+  image: url(:/theme/active/uparrow.svg);
   border-width: 0px;
   margin-right: 5px;
 }
@@ -265,7 +265,7 @@ QSpinBox::up-button {
 QDateTimeEdit::up-button:disabled,
 QDoubleSpinBox::up-button:disabled,
 QSpinBox::up-button:disabled {
-  image: url(icon:/disabled/uparrow.svg);
+  image: url(:/theme/disabled/uparrow.svg);
 }
 
 QDateTimeEdit::down-button,
@@ -274,7 +274,7 @@ QSpinBox::down-button {
   subcontrol-origin: border;
   subcontrol-position: bottom right;
   width: 20px;
-  image: url(icon:/active/downarrow.svg);
+  image: url(:/theme/active/downarrow.svg);
   border-width: 0px;
   border-top-width: 0;
   margin-right: 5px;
@@ -283,7 +283,7 @@ QSpinBox::down-button {
 QDateTimeEdit::down-button:disabled,
 QDoubleSpinBox::down-button:disabled,
 QSpinBox::down-button:disabled {
-  image: url(icon:/disabled/downarrow.svg);
+  image: url(:/theme/disabled/downarrow.svg);
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -428,12 +428,12 @@ QTabBar QToolButton::down-arrow {
 }
 
 QTabBar QToolButton::right-arrow {
-  image: url(icon:/disabled/rightarrow2.svg);
+  image: url(:/theme/disabled/rightarrow2.svg);
   height: 28px;
 }
 
 QTabBar QToolButton::left-arrow {
-  image: url(icon:/disabled/leftarrow2.svg);
+  image: url(:/theme/disabled/leftarrow2.svg);
   height: 28px;
 }
 
@@ -517,7 +517,7 @@ QListView::indicator:checked:selected:active {
 }
 
 QListView::indicator:checked:disabled {
-  image: url(icon:/disabled/checklist.svg);
+  image: url(:/theme/disabled/checklist.svg);
 }
 
 QListView::indicator:indeterminate,
@@ -531,7 +531,7 @@ QListView::indicator:indeterminate:selected:active {
 }
 
 QListView::indicator:indeterminate:disabled {
-  image: url(icon:/disabled/checklist_indeterminate.svg);
+  image: url(:/theme/disabled/checklist_indeterminate.svg);
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -550,7 +550,7 @@ QTableView::indicator:checked:selected:active {
 QTableView::indicator:disabled:checked,
 QTableView::indicator:disabled:checked:selected,
 QTableView::indicator:disabled:checked:focus {
-  image: url(icon:/disabled/checkbox_checked.svg);
+  image: url(:/theme/disabled/checkbox_checked.svg);
 }
 
 QTableView::indicator:enabled:unchecked,
@@ -566,7 +566,7 @@ QTableView::indicator:unchecked:selected:active {
 QTableView::indicator:disabled:unchecked,
 QTableView::indicator:disabled:unchecked:selected,
 QTableView::indicator:disabled:unchecked:focus {
-  image: url(icon:/disabled/checkbox_unchecked.svg);
+  image: url(:/theme/disabled/checkbox_unchecked.svg);
 }
 
 QTableView::indicator:enabled:indeterminate,
@@ -582,7 +582,7 @@ QTableView::indicator:indeterminate:selected:active {
 QTableView::indicator:disabled:indeterminate,
 QTableView::indicator:disabled:indeterminate:selected,
 QTableView::indicator:disabled:indeterminate:focus {
-  image: url(icon:/disabled/checkbox_indeterminate.svg);
+  image: url(:/theme/disabled/checkbox_indeterminate.svg);
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -605,17 +605,17 @@ QGroupBox::indicator:indeterminate {
 
 QCheckBox::indicator:checked:disabled,
 QGroupBox::indicator:checked:disabled {
-  image: url(icon:/disabled/checkbox_checked.svg);
+  image: url(:/theme/disabled/checkbox_checked.svg);
 }
 
 QCheckBox::indicator:unchecked:disabled,
 QGroupBox::indicator:unchecked:disabled {
-  image: url(icon:/disabled/checkbox_unchecked.svg);
+  image: url(:/theme/disabled/checkbox_unchecked.svg);
 }
 
 QCheckBox::indicator:indeterminate:disabled,
 QGroupBox::indicator:indeterminate:disabled {
-  image: url(icon:/disabled/checkbox_indeterminate.svg);
+  image: url(:/theme/disabled/checkbox_indeterminate.svg);
 }
 
 /*  ------------------------------------------------------------------------  */
@@ -630,11 +630,11 @@ QRadioButton::indicator:unchecked {
 }
 
 QRadioButton::indicator:checked:disabled {
-  image: url(icon:/disabled/radiobutton_checked.svg);
+  image: url(:/theme/disabled/radiobutton_checked.svg);
 }
 
 QRadioButton::indicator:unchecked:disabled {
-  image: url(icon:/disabled/radiobutton_unchecked.svg);
+  image: url(:/theme/disabled/radiobutton_unchecked.svg);
 }
 
 
@@ -727,7 +727,7 @@ QMenu::right-arrow{
 }
 
 QMenu::right-arrow:selected{
-  image: url(icon:/disabled/rightarrow.svg);
+  image: url(:/theme/disabled/rightarrow.svg);
 }
 
 QMenu::indicator:non-exclusive:unchecked {
@@ -1129,16 +1129,16 @@ QTreeView::branch:open:has-children:has-siblings {
 }
 
 QTreeView::branch:has-siblings:!adjoins-item {
-  border-image: url(icon:/disabled/vline.svg) 0;
+  border-image: url(:/theme/disabled/vline.svg) 0;
 }
 
 QTreeView::branch:has-siblings:adjoins-item {
-    border-image: url(icon:/disabled/branch-more.svg) 0;
+    border-image: url(:/theme/disabled/branch-more.svg) 0;
 }
 
 QTreeView::branch:!has-children:!has-siblings:adjoins-item,
 QTreeView::branch:has-children:!has-siblings:adjoins-item {
-    border-image: url(icon:/disabled/branch-end.svg) 0;
+    border-image: url(:/theme/disabled/branch-end.svg) 0;
 }
 
 QTreeView QHeaderView::section {
