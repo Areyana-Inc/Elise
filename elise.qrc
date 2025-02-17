@@ -5,5 +5,36 @@
     <qresource prefix="/">
         <file>theme/primary/splitter-horizontal.svg</file>
         <file>theme/primary/splitter-vertical.svg</file>
+        <file>theme/primary/sizegrip.svg</file>
+        <file>theme/primary/downarrow.svg</file>
+        <file>theme/primary/downarrow2.svg</file>
+        <file>theme/primary/uparrow.svg</file>
+        <file>theme/primary/uparrow2.svg</file>
+        <file>theme/primary/downarrow2.svg</file>
+        <file>theme/primary/rightarrow.svg</file>
+        <file>theme/primary/rightarrow2.svg</file>
+        <file>theme/primary/leftarrow.svg</file>
+        <file>theme/primary/tab_close.svg</file>
+        <file>theme/primary/checklist.svg</file>
+        <file>theme/primary/checklist_invert.svg</file>
+        <file>theme/primary/checklist_indeterminate.svg</file>
+        <file>theme/primary/checklist_indeterminate_invert.svg</file>
+        <file>theme/primary/checkbox_checked.svg</file>
+        <file>theme/primary/checkbox_checked_invert.svg</file>
+        <file>theme/primary/checkbox_unchecked.svg</file>
+        <file>theme/primary/checkbox_unchecked_invert.svg</file>
+        <file>theme/primary/checkbox_indeterminate.svg</file>
+        <file>theme/primary/checkbox_indeterminate_invert.svg</file>
+        <file>theme/primary/radiobutton_checked.svg</file>
+        <file>theme/primary/radiobutton_checked_invert.svg</file>
+        <file>theme/primary/radiobutton_unchecked.svg</file>
+        <file>theme/primary/radiobutton_unchecked_invert.svg</file>
+        <file>theme/primary/close.svg</file>
+        <file>theme/primary/float.svg</file>
+        <file>theme/primary/slider.svg</file>
+        <file>theme/primary/toolbar-handle-horizontal.svg</file>
+        <file>theme/primary/toolbar-handle-vertical.svg</file>
+        <file>theme/primary/branch-closed.svg</file>
+        <file>theme/primary/branch-open.svg</file>
     </qresource>
 </RCC>
